@@ -1,10 +1,17 @@
 import './App.css';
+import Sidebar from './Sidebar';
+import Chat from './Chat';
 
 function App() {
   return (
     //BEM
     <div className="app">
-      <p>hi</p>
+     
+
+      <div className="app__body">
+        <Sidebar />
+        <Chat />
+      </div>
     </div>
   );
 }
