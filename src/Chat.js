@@ -13,7 +13,7 @@ import firebase from "firebase/compat/app";
 function Chat() {
     const [input, setInput] = useState("");
     const [seed, setSeed] = useState("");
-    const {roomId} = useParams("");
+    const {roomId} = useParams();
     const [roomName,setRoomName]=useState("");
     const [messages,setMessages]=useState([]);
     const [{user},dispatch]=useStateValue();
@@ -76,7 +76,7 @@ function Chat() {
 
       <div className='chat__body'>
         {messages.map((message)=>(
-          <p className={`chat__message ${message.name===user.displayName&&"chat_reciever"}`}>
+          <p className={`chat__message ${message.name===user.displayName&&"chat__ reciever"}`}>
                 <span className='chat__name'>{message.name}</span>
                 {message.message}
                 <span 
